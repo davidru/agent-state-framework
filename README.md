@@ -18,6 +18,7 @@ AI coding assistants (Copilot CLI, Cursor, Windsurf, Claude Code, etc.) lose all
 ```
 your-project/
 ├── AGENT.md                    # Identity, protocol, state rules (read every session)
+├── KB-CREATION-GUIDE.md        # Setup wizard + KB creation best practices
 ├── learned/                    # Agent-writable mutable state
 │   ├── developments.md         #   New facts and events
 │   ├── corrections.md          #   Errors found in project files
@@ -62,13 +63,13 @@ AGENT.md includes plug-in modules you can enable or delete:
 
 ```bash
 # Clone the template
-git clone https://github.com/YOUR_USERNAME/agent-state-framework.git my-project
+git clone https://github.com/davidru/agent-state-framework.git my-project
 
-# Customize
-# 1. Edit AGENT.md Section 1 (Identity)
-# 2. Delete unused modules from Section 5
-# 3. Add your project files
-# 4. Point your AI tool at AGENT.md
+# Point your AI tool at AGENT.md
+# On first session, the agent detects setup_complete: false
+# and runs the Setup Wizard — asking you 11 questions to configure
+# the project: scope, audience, topics, sources, depth, and structure.
+# Then it generates the file structure and begins content creation.
 ```
 
 ## Works With
