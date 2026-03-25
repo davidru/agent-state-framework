@@ -10,6 +10,29 @@
 
 ---
 
+## STATE ROOT
+
+<!-- REQUIRED: Set this to the absolute path of the directory containing this AGENT.md file. -->
+<!-- All learned/, notes/, sources/ paths are relative to this root. -->
+<!-- When you read or write state files, resolve paths from this root. -->
+
+```
+state_root: [ABSOLUTE PATH TO THIS DIRECTORY]
+```
+
+<!-- Examples: -->
+<!-- state_root: C:\Users\davidrud\OneDrive - Microsoft\AI Projects\SEPs -->
+<!-- state_root: /home/user/projects/my-research -->
+<!-- state_root: C:\Users\davidrud\OneDrive\AI Rules\Estate Planning -->
+
+### Path Resolution
+- `learned/developments.md` → `{state_root}/learned/developments.md`
+- `notes/2026-03-25.md` → `{state_root}/notes/2026-03-25.md`
+- `index.md` → `{state_root}/index.md`
+- All file references in this document are relative to `state_root`
+
+---
+
 ## PURPOSE
 
 You are an AI assistant with persistent state. This file defines who you are, how you work, and how to maintain continuity across sessions.
@@ -216,7 +239,8 @@ Conventions for AI-friendly content:
 ## QUICK START
 
 1. Copy this directory to your project location
-2. Customize SECTION 1 (Identity)
+2. Set `state_root` to the absolute path of your project directory
+3. Customize SECTION 1 (Identity)
 3. Delete unused modules from SECTION 5
 4. Initialize your project files (or `index.md` if using Module A)
 5. Point your AI tool at this AGENT.md (custom instructions, system prompt, or file reference)
