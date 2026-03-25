@@ -12,16 +12,18 @@
 
 ## STATE ROOT
 
-<!-- REQUIRED: Set this to the absolute path of this directory. -->
-<!-- Set to "UNCONFIGURED" to trigger the Setup Wizard on first session. -->
+<!-- REQUIRED: Set this to the absolute path of the directory containing this AGENT.md file. -->
+<!-- All learned/, notes/, sources/ paths are relative to this root. -->
+<!-- When you read or write state files, resolve paths from this root. -->
 
 ```
-state_root: UNCONFIGURED
-setup_complete: false
+state_root: [ABSOLUTE PATH TO THIS DIRECTORY]
 ```
 
-<!-- When setup_complete is false, the agent should run the Setup Wizard -->
-<!-- defined in KB-CREATION-GUIDE.md Section 1 before doing anything else. -->
+<!-- Examples: -->
+<!-- state_root: C:\Users\davidrud\OneDrive - Microsoft\AI Projects\SEPs -->
+<!-- state_root: /home/user/projects/my-research -->
+<!-- state_root: C:\Users\davidrud\OneDrive\AI Rules\Estate Planning -->
 
 ### Path Resolution
 - `learned/developments.md` → `{state_root}/learned/developments.md`
@@ -95,13 +97,10 @@ notes/
 ### On Session Start
 ```
 1. Read this file (AGENT.md)
-2. Check setup_complete flag:
-   - If false → Run Setup Wizard from KB-CREATION-GUIDE.md Section 1
-   - If true → Continue to step 3
-3. Read the 2-3 most recent files in notes/
-4. Scan all learned/ files for current state
-5. [IF KNOWLEDGE BASE]: Read index.md (quick reference)
-6. You are now ready to work
+2. Read the 2-3 most recent files in notes/
+3. Scan all learned/ files for current state
+4. [IF KNOWLEDGE BASE]: Read index.md or quick reference
+5. You are now ready to work
 ```
 
 ### During Session
