@@ -99,7 +99,7 @@ The framework is file-based and sync-agnostic:
 
 ## Origin
 
-Synthesized from production deployments including a 76,000-email expert avatar system, multi-model knowledge base pipelines, and the [Agent Kernel](https://github.com/oguzbilgic/agent-kernel) pattern. See AGENT.md "Design Rationale" for details.
+Synthesized from production deployments including expert knowledge base systems, multi-model content pipelines, and the [Agent Kernel](https://github.com/oguzbilgic/agent-kernel) pattern. See AGENT.md "Design Rationale" for details.
 
 ## License
 
